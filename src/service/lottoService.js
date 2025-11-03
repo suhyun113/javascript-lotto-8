@@ -13,3 +13,14 @@ export const issueTickets = (amount) => {
     }
     return tickets;
 };
+
+export const matchCounter = (ticket, winningNumbers) => {
+    const winSet = new Set(winningNumbers);
+    let count = 0;
+    for (const n of ticket) {
+        if (winSet.has(n)) {
+            count += 1;
+        }
+    }
+    return count;
+};

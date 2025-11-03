@@ -45,9 +45,9 @@
 ### 3. service
 - LottoService
     - [X] issueTickets : 금액 -> 정수 계산, Random Api 통한 티켓 발행
+    - [X] matchCounter : 교집합 개수 판정
+    - [ ] rankResolver : 보너스 포함 판정
     - [ ] evaluate : 로또 번호 일치 개수 계산, 등수 판정, 집계 및 수익률 반환
-- matchCounter : 교집합 개수 판정
-- rankResolver : 보너스 포함 판정
 
 
 ### 4. io
