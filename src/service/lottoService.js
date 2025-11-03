@@ -34,3 +34,24 @@ export const rankResolver = (ticketNumbers, winningNumbers, bonusNumber) => {
     if (matchCount === 3) return 'FIFTH';
     return 'NONE';
 };
+
+const computeTotalPrize = (rankCounts) => {
+    let total = 0;
+    total += rankCounts.FIRST * PRIZE.FIRST;
+    total += rankCounts.SECOND * PRIZE.SECOND;
+    total += rankCounts.THIRD * PRIZE.THIRD;
+    total += rankCounts.FOURTH * PRIZE.FOURTH;
+    total += rankCounts.FIFTH * PRIZE.FIFTH;
+    return total;
+};
+
+export const evaluate = (tickets, winningNumbers, bonusNumber) => {
+    const rankCounts = { FIRST: 0, SECOND: 0, THIRD: 0, FOURTH: 0, FIFTH: 0};
+    for (const ticket of tickets) {
+        const rank = rankResolver(ticket.getNumbers(), winningNumbers, bonusNumber);
+        if (counts[rank] !== undefined) counts[rank] += 1;
+    }
+    return { counts: rankCounts, totalPrize: computeTotalPrize(rankCounts) };
+};
+
+export default { issueTickets, matchCounter, rankResolver, evaluate };
