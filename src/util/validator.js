@@ -14,7 +14,7 @@ export const validateAmount = (amount) => {
 
 export const validateWinningNumbers = (numbers) => {
     if (!Array.isArray(numbers) || numbers.length !== LOTTO_SIZE) {
-        throw new Error(`로또 번호는 ${LOTTO_MIN}개의 숫자여야 합니다.`);
+        throw new Error(`로또 번호는 ${LOTTO_SIZE}개의 숫자여야 합니다.`);
     }
     if (numbers.some(number => !inRange(number))) {
         throw new Error(`로또 번호는 ${LOTTO_MIN}부터 ${LOTTO_MAX} 사이의 숫자여야 합니다.`);

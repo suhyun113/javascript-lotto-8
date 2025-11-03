@@ -9,11 +9,11 @@ export function parseAmount(amountStr) {
 }
 
 export function parseWinningNumbers(numbersStr) {
-    const numbers = String(numbersStr ?? "").trim().split(",").map(num => num.trim());
-    if (numbers.length !== LOTTO_SIZE || numbers.every(num => !/^\d+$/.test(num))) {
-        throw new Error(`당첨 번호는 쉼표로 구분된 ${LOTTO_MAX}개의 숫자여야 합니다.`);
+    const tokens = String(numbersStr ?? "").trim().split(",").map(num => num.trim());
+    if (tokens.length !== LOTTO_SIZE || tokens.some(token => !/^\d+$/.test(token))) {
+        throw new Error(`당첨 번호는 쉼표로 구분된 ${LOTTO_SIZE}개의 숫자여야 합니다.`);
     }
-    return numbers.map(Number);
+    return tokens.map(Number);
 }
 
 export function parseBonusNumber(bonusStr) {

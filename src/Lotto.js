@@ -1,4 +1,4 @@
-import { LOTTO_MIN, LOTTO_MAX, LOTTO_SIZE } from "../constants.js";
+import { LOTTO_MIN, LOTTO_MAX, LOTTO_SIZE } from "./constants.js";
 
 class Lotto {
   #numbers;

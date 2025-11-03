@@ -1,6 +1,6 @@
 import {MissionUtils} from '@woowacourse/mission-utils';
 import { LOTTO_MIN, LOTTO_MAX, LOTTO_SIZE, LOTTO_PRICE, PRIZE } from "../constants.js";
-import Lotto from "../domain/Lotto.js";
+import Lotto from "../Lotto.js";
 
 const sortAscending = (arr) => [...arr].sort((a, b) => a - b);
 
