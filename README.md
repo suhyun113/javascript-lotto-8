@@ -53,7 +53,7 @@
 ### 4. io
 - [ ] InputView
 - [ ] OutputView
-- [ ] 공통 에러 처리
+- [X] 공통 에러 처리
 
 
 ### 5. App.js
