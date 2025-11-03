@@ -6,8 +6,10 @@ const sortAscending = (arr) => [...arr].sort((a, b) => a - b);
 
 export const issueTickets = (amount) => {
     const count = amount / LOTTO_PRICE;
-    return Array.from({ length: count }, () => {
+    const tickets = [];
+    for (let i = 0; i < count; i += 1) {
         const numbers = MissionUtils.Random.pickUniqueNumbersInRange(LOTTO_MIN, LOTTO_MAX, LOTTO_SIZE);
-        return new Lotto(sortAscending(numbers));
-    });
+        tickets.push(new Lotto(sortAscending(numbers)));
+    }
+    return tickets;
 };
