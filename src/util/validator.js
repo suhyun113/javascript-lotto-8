@@ -14,9 +14,9 @@ export const validateAmount = (amount) => {
 
 export const validateWinningNumbers = (numbers) => {
     if (!Array.isArray(numbers) || numbers.length !== LOTTO_SIZE) {
-        throw new Error("[Error] 로또 번호는 6개의 숫자여야 합니다.");
+        throw new Error(`[Error] 로또 번호는 ${LOTTO_MIN}개의 숫자여야 합니다.`);
     }
-    if (!numbers.some(number => !inRange(number))) {
+    if (numbers.some(number => !inRange(number))) {
         throw new Error(`[Error] 로또 번호는 ${LOTTO_MIN}부터 ${LOTTO_MAX} 사이의 숫자여야 합니다.`);
     }
     const uniqueNumbers = new Set(numbers);
@@ -26,13 +26,12 @@ export const validateWinningNumbers = (numbers) => {
     return numbers;
 }
 
-
 export const validateBonusNumber = (bonusNumber, winningNumbers) => {
     if (!inRange(bonusNumber)) {
         throw new Error(`[Error] 보너스 번호는 ${LOTTO_MIN}부터 ${LOTTO_MAX} 사이의 숫자여야 합니다.`);
     }
-    const winningNumbers = new Set(winningNumbers);
-    if (winningNumbers.includes(bonusNumber)) {
+    const winSet = new Set(winningNumbers);
+    if (winSet.has(bonusNumber)) {
         throw new Error("[Error] 보너스 번호는 당첨 번호와 중복될 수 없습니다.");
     }
     return bonusNumber;

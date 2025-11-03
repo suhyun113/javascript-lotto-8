@@ -49,9 +49,10 @@ export const evaluate = (tickets, winningNumbers, bonusNumber) => {
     const rankCounts = { FIRST: 0, SECOND: 0, THIRD: 0, FOURTH: 0, FIFTH: 0};
     for (const ticket of tickets) {
         const rank = rankResolver(ticket.getNumbers(), winningNumbers, bonusNumber);
-        if (counts[rank] !== undefined) counts[rank] += 1;
+        if (rankCounts[rank] !== undefined) rankCounts[rank] += 1;
     }
-    return { counts: rankCounts, totalPrize: computeTotalPrize(rankCounts) };
+    const totalPrize = computeTotalPrize(rankCounts);
+    return { rankCounts, totalPrize };
 };
 
 export default { issueTickets, matchCounter, rankResolver, evaluate };

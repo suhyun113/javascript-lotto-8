@@ -1,6 +1,6 @@
 import { MissionUtils } from '@woowacourse/mission-utils';
 import { parseAmount, parseWinningNumbers, parseBonusNumber } from "../util/parser.js";
-import { validateAmoun, validateWinningNumbers, validateBonusNumber } from '../util/validator.js';
+import { validateAmount, validateWinningNumbers, validateBonusNumber } from '../util/validator.js';
 import { printError } from './error.js';
 
 const ask = (question) => MissionUtils.Console.readLineAsync(question);
