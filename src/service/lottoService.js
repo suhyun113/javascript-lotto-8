@@ -52,7 +52,7 @@ export const evaluate = (tickets, winningNumbers, bonusNumber) => {
         if (rankCounts[rank] !== undefined) rankCounts[rank] += 1;
     }
     const totalPrize = computeTotalPrize(rankCounts);
-    return { rankCounts, totalPrize };
+    return { counts: rankCounts, totalPrize };
 };
 
 export default { issueTickets, matchCounter, rankResolver, evaluate };
