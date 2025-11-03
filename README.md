@@ -33,13 +33,13 @@
     - [X] validateBonusNumber : 1~45, 당첨 번호와 중복 불가
 
 - format(출력 포맷)
-    - [ ] formatTicket : `[1, 2, 5, 14, 22, 45]` 문자열화
-    - [ ] formatRate : 소수점 둘째 자리 반올림 퍼센트 `"62.5%"`
+    - [X] formatTicket : `[1, 2, 5, 14, 22, 45]` 문자열화
+    - [X] formatRate : 소수점 둘째 자리 반올림 퍼센트 `"62.5%"`
 
 
 ### 2. domain
-- Lotto 클래스 : 생성자에서 번호 검증
-- Ranks, Prizes 상수 : 등수 규칙 및 상금 테이블
+- [X] Lotto 클래스 : 생성자에서 번호 검증
+- [ ] Ranks, Prizes 상수 : 등수 규칙 및 상금 테이블
 
 
 ### 3. service
