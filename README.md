@@ -23,15 +23,14 @@
 ## 🔧 구현할 기능 목록
 ### 1. util
 - parser(문자열 -> 자료형 변환)
-    - [ ] parseAmount : 구입 금액 문자열 -> 정수
-    - [ ] parseWinningNumbers : 로또 담청 번호 문자열 -> 정수 배열
-    - [ ] parseBonusNumber : 보너스 번호 문자열 -> 정수
+    - [X] parseAmount : 구입 금액 문자열 -> 정수
+    - [X] parseWinningNumbers : 로또 담청 번호 문자열 -> 정수 배열
+    - [X] parseBonusNumber : 보너스 번호 문자열 -> 정수
 
 - validator(입력 규칙 검증)
-    - [ ] validateAmount : 정수 여부, 1000원 단위, 최소 1000원
-    - [ ] validateTicketNumbers : 길이 6, 1~45, 중복 없음
-    - [ ] validateWinningNumbers : 길이 6, 1~45, 중복 없음
-    - [ ] validateBonusNumber : 1~45, 당첨 번호와 중복 불가
+    - [X] validateAmount : 정수 여부, 1000원 단위, 최소 1000원
+    - [X] validateWinningNumbers : 길이 6, 1~45, 중복 없음
+    - [X] validateBonusNumber : 1~45, 당첨 번호와 중복 불가
 
 - format(출력 포맷)
     - [ ] formatTicket : `[1, 2, 5, 14, 22, 45]` 문자열화
