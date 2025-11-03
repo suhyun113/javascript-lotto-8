@@ -51,7 +51,7 @@
 
 
 ### 4. io
-- [ ] InputView
+- [X] InputView
 - [ ] OutputView
 - [X] 공통 에러 처리
 
